@@ -3,7 +3,7 @@
 const express = require('express')
     , bodyParser = require('body-parser')
     , app = express()
-    , request = require("superagent");
+    , request = require("request");
 
 var google = require('googleapis')
   , plus = google.plus('v1')
@@ -43,13 +43,8 @@ app.get('/setAuthCode', function(req, res){
   res.send('Code Received');
 });
 
-app.get('/getAuthUrl', function(req, res){
-  request
-   .get(url)
-   .then(function(response) {
-    console.log('This is response -- > ', response)
-   });
-  res.send('Working on It');
+app.get('/getAuthUrl', function(req, res){  
+  res.send('url');
 });
 
 app.get('/getTokenUrl', function(req, res){
