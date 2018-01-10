@@ -9,10 +9,11 @@ var google = require('googleapis')
   , plus = google.plus('v1')
   , OAuth2 = google.auth.OAuth2
   , oauth2Client = new OAuth2(
-  '691098961139-vii844i3lpk864qhf8r7jpkab1tv3j8h.apps.googleusercontent.com',
-  'bIYU4h5RL1r-02kqLD8eJr2m',
-  'https://oauth-redirect.googleusercontent.com/r/natasha-deb33'
-);
+                      '691098961139-vii844i3lpk864qhf8r7jpkab1tv3j8h.apps.googleusercontent.com',
+                      'bIYU4h5RL1r-02kqLD8eJr2m',
+                      'https://oauth2-actions.herokuapp.com/setAuthCode'
+                    );
+var code;
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -34,6 +35,12 @@ var url = oauth2Client.generateAuthUrl({
 
   // Optional property that passes state parameters to redirect URI
   // state: 'foo'
+});
+
+app.get('/setAuthCode', function(req, res){
+  code = req.query.code;
+  console.log('Inside Set Auth Code --> ', code)
+  res.send('Code Received');
 });
 
 app.get('/getAuthUrl', function(req, res){
