@@ -37,7 +37,7 @@ var url = oauth2Client.generateAuthUrl({
 });
 
 app.get('/getAuthUrl', function(req, res){
-  console.log('This is url: ', url)
+  res.send(url);
 });
 
 app.get('/getTokenUrl', function(req, res){
