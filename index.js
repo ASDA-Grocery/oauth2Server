@@ -9,9 +9,9 @@ var google = require('googleapis')
   , plus = google.plus('v1')
   , OAuth2 = google.auth.OAuth2
   , oauth2Client = new OAuth2(
-  691098961139-vii844i3lpk864qhf8r7jpkab1tv3j8h.apps.googleusercontent.com,
-  bIYU4h5RL1r-02kqLD8eJr2m,
-  https://oauth-redirect.googleusercontent.com/r/natasha-deb33
+  '691098961139-vii844i3lpk864qhf8r7jpkab1tv3j8h.apps.googleusercontent.com',
+  'bIYU4h5RL1r-02kqLD8eJr2m',
+  'https://oauth-redirect.googleusercontent.com/r/natasha-deb33'
 );
 
 app.use(bodyParser.urlencoded({
