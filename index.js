@@ -11,7 +11,7 @@ var google = require('googleapis')
   , oauth2Client = new OAuth2(
   '691098961139-vii844i3lpk864qhf8r7jpkab1tv3j8h.apps.googleusercontent.com',
   'bIYU4h5RL1r-02kqLD8eJr2m',
-  'https://www.google.com/'
+  'https://oauth-redirect.googleusercontent.com/r/natasha-deb33'
 );
 
 app.use(bodyParser.urlencoded({
