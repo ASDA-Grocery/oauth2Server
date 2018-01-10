@@ -44,7 +44,12 @@ app.get('/setAuthCode', function(req, res){
 });
 
 app.get('/getAuthUrl', function(req, res){
-  res.send(url);
+  request
+   .get(url)
+   .then(function(response) {
+    console.log('This is response -- > ', response)
+   });
+  res.send('Working on It');
 });
 
 app.get('/getTokenUrl', function(req, res){
