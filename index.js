@@ -11,7 +11,7 @@ var google = require('googleapis')
   , oauth2Client = new OAuth2(
   '691098961139-vii844i3lpk864qhf8r7jpkab1tv3j8h.apps.googleusercontent.com',
   'bIYU4h5RL1r-02kqLD8eJr2m',
-  'https://oauth-redirect.googleusercontent.com/r/natasha-deb33'
+  'https://www.google.com/'
 );
 
 app.use(bodyParser.urlencoded({
@@ -41,9 +41,9 @@ app.get('/getAuthUrl', function(req, res){
 });
 
 app.get('/getTokenUrl', function(req, res){
-    console.log('Code --> ', req,query.code)
-    console.log('Params -->', req.params.code)
-    res.send('Working on it')
+//     console.log('Code --> ', req,query.code)
+//     console.log('Params -->', req.params.code)
+//     res.send('Working on it')
 });
 
 app.listen((process.env.PORT || 8000), function() {
