@@ -1,0 +1,6 @@
+{
+  "name": "server-oauth2-authorization",
+  "description": "server-oauth2-authorizationt",
+  "repository": "https://github.com/ASDA-Grocery/oauth2Server.git",
+  "keywords": ["oauth2", "actions on google"]
+}
