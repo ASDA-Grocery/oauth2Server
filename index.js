@@ -3,7 +3,7 @@
 const express = require('express')
     , bodyParser = require('body-parser')
     , app = express()
-    , request = require("request");
+    , request = require("superagent");
 
 var google = require('googleapis')
   , plus = google.plus('v1')
