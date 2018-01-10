@@ -41,7 +41,9 @@ app.get('/getAuthUrl', function(req, res){
 });
 
 app.get('/getTokenUrl', function(req, res){
-
+    console.log('Code --> ', req,query.code)
+    console.log('Params -->', req.params.code)
+    res.send('Working on it')
 });
 
 app.listen((process.env.PORT || 8000), function() {
